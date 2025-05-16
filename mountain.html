@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountains - JustFuel Up</title>
+    <style>
+        body {
+            font-family: 'New Amsterdam', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('/mountain/mountainbgpage.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        .overlay {
+            background: rgba(18, 18, 18, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #222;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            color: #9158DC;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgba(18, 18, 18, 0.615);
+            padding: 10px 20px;
+            position: fixed;
+            width: 60%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #b33636;
+        }
+
+        .header {
+            text-align: center;
+            padding: 150px 20px 50px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 48px;
+            color: #f94f25;
+            
+        }
+
+        .header p {
+            margin: 10px 0 0;
+            font-size: 26px;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .content h2 {
+            font-size: 30px;
+            margin: 20px 0;
+            color: #000000;
+        }
+
+        .content p {
+            margin: 10px 0;
+        }
+
+        .location {
+            margin: 20px 0;
+        }
+
+        .location img {
+            width: 30%;
+            height: 270px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            margin-left: 70px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .location img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .about {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            border-radius: 20px;
+            margin: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #121212;
+            color: white;
+            font-size: 20px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="#locations" class="dropbtn">Location</a>
+            <div class="dropdown-content">
+                <a href="mountain.html">Mountains</a>
+                <a href="beach.html">Beach</a>
+                <a href="desert.html">Desert</a>
+                <a href="spiritual.html">Spiritual</a>
+                <a href="wildlife.html">Wildlife</a>
+            </div>
+        </div>
+        <a href="#about">About</a>
+        <a href="budget_calculator.html">Budget Calculator</a>
+        <a href="ai.html">AI Assistant</a>
+    </div>
+
+    <!-- Website Name and Description -->
+    <div class="header">
+        <h1>JustFuel Up</h1>
+        <p>Your personalized road trip planner for exploring the wonders of India.</p>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h2>Explore the Majestic Mountains</h2>
+        <p>Mountains offer breathtaking views, fresh air, and a serene escape from the hustle and bustle of city life. Whether you're an adventure enthusiast or looking for a peaceful retreat, the mountains have something to offer for everyone.</p>
+
+        <h2>Indian Mountains</h2>
+        <p>India is home to some of the most beautiful and diverse mountain ranges in the world. From the towering peaks of the Himalayas to the lush greenery of the Western Ghats, there's a mountain destination for every type of traveler.</p>
+
+        <!-- Indian Mountain Destinations -->
+        <div class="location">
+            <h3>1. Manali</h3>
+            <img src="/mountain/manali1.jpg" alt="Manali" >
+            <img src="/mountain/manali2.webp" alt="Manali">
+            <p>Manali, located in Himachal Pradesh, is a popular hill station known for its stunning landscapes, adventure sports, and vibrant culture.</p>
+            <p><strong>Activities:</strong> Paragliding, trekking, skiing, river rafting, exploring local markets, and visiting ancient temples.</p>
+            <p>Manali is also famous for its scenic beauty, snow-capped mountains, and lush green valleys. It's a perfect destination for honeymooners and adventure seekers alike.</p>
+        </div>
+
+        <div class="location">
+            <h3>2. Shimla</h3>
+            <img src="/mountain/shimla1.jpg" alt="Shimla">
+            <img src="/mountain/shimla2.jpg" alt="Shimla">
+            <p>Shimla, the capital of Himachal Pradesh, offers colonial charm, pleasant weather, and scenic views.</p>
+            <p><strong>Activities:</strong> Toy train rides, ice skating, hiking, visiting historical sites, and shopping at Mall Road.</p>
+            <p>Shimla is known for its British-era architecture, pine forests, and the famous Jakhoo Temple. It's a great place to enjoy a peaceful vacation amidst nature.</p>
+        </div>
+
+        <div class="location">
+            <h3>3. Darjeeling</h3>
+            <img src="/mountain/darjeeling1.jpg" alt="Darjeeling">
+            <img src="/mountain/darjeeling2.jpg" alt="Darjeeling">
+            <p>Darjeeling, in West Bengal, is famous for its tea gardens, panoramic views, and the UNESCO World Heritage Darjeeling Himalayan Railway.</p>
+            <p><strong>Activities:</strong> Tea garden tours, toy train rides, trekking, visiting monasteries, and enjoying views of Kanchenjunga.</p>
+            <p>Darjeeling is also known for its vibrant culture, Tibetan influence, and the stunning Tiger Hill sunrise. It's a must-visit for tea lovers and nature enthusiasts.</p>
+        </div>
+
+        <div class="location">
+            <h3>4. Leh-Ladakh</h3>
+            <img src="/mountain/leh-ladakh1.jpg" alt="Leh-Ladakh">
+            <img src="/mountain/leh-ladakh2.jpg" alt="Leh-Ladakh">
+            <p>Leh-Ladakh, located in Jammu and Kashmir, is known for its rugged terrain, Buddhist monasteries, and stunning landscapes.</p>
+            <p><strong>Activities:</strong> Biking, trekking, river rafting, exploring ancient monasteries, and visiting Pangong Lake.</p>
+            <p>Leh-Ladakh offers a unique blend of adventure and spirituality. It's a paradise for bikers, trekkers, and photographers, with its pristine lakes and snow-clad mountains.</p>
+        </div>
+
+        <div class="location">
+            <h3>5. Ooty</h3>
+            <img src="/mountain/ooty1.jpg" alt="Ooty">
+            <img src="/mountain/ooty2.jpg" alt="Ooty">
+            <p>Ooty, in Tamil Nadu, is a popular hill station known for its lush greenery, botanical gardens, and serene lakes.</p>
+            <p><strong>Activities:</strong> Boating, trekking, visiting botanical gardens, exploring tea estates, and enjoying the toy train ride.</p>
+            <p>Ooty is also known for its pleasant climate, beautiful flower shows, and the Nilgiri Mountain Railway. It's a great destination for families and nature lovers.</p>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="about" class="about">
+        <h2>About Us</h2>
+        <p>JustFuel Up is dedicated to helping you plan the perfect road trip across India, tailored to your preferences and needs.</p>
+        <p>Whether you're looking for adventure, relaxation, or spiritual enlightenment, we've got you covered.</p>
+        <p>Our platform offers personalized recommendations based on your travel style, ensuring you have a memorable experience.</p>
+        <p>We also provide tools to manage your budget, plan your stops, and discover activities along the way.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Credits:  Priyansh Pratap Singh</p>
+    </div>
+
+</body>
+</html>

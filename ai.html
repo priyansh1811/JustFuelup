@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant - JustFuel Up</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('ai.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+        .overlay {
+            background: rgba(145, 88, 220, 0.8);
+            padding: 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            transition: color 0.3s;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            color: #ffce00;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            padding: 10px 15px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+            font-size: 0.9rem;
+        }
+        .dropdown-content a:hover {
+            background-color: #f3f7f8;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            color: #ffce00;
+        }
+        .header {
+            text-align: center;
+            padding: 150px 20px 50px;
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 3rem;
+            color: #ffce00;
+        }
+        .header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h2 {
+            font-size: 2.5rem;
+            margin: 20px 0;
+            color: white;
+        }
+        .content p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: white;
+            font-weight: 500;
+        }
+        .assistant {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            font-weight: bold;
+            backdrop-filter: blur(10px);
+        }
+        .assistant label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+        .assistant select, .assistant input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .assistant button {
+            padding: 10px 20px;
+            background: #145088;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .assistant button:hover {
+            background: #003d6b;
+        }
+        .about {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+     <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <a href="#locations" class="dropbtn">Location</a>
+                <div class="dropdown-content">
+                    <a href="mountain.html">Mountains</a>
+                    <a href="beach.html">Beach</a>
+                    <a href="desert.html">Desert</a>
+                    <a href="spiritual.html">Spiritual</a>
+                    <a href="wildlife.html">Wildlife</a>
+                </div>
+            </div>
+            <a href="#about">About</a>
+            <a href="budget_calculator.html">Budget Calculator</a>
+            <a href="ai.html">AI Assistant</a>
+        </div>
+    
+        <!-- Website Name and Description -->
+        <div class="header">
+            <h1>JustFuel Up</h1>
+            <p>Your personalized road trip planner for exploring the wonders of India.</p>
+        </div>
+    
+        <!-- Content -->
+        <div class="content">
+            <h2>AI Assistant</h2>
+            <p>Our AI Assistant will help you choose the best location based on your preferences. Answer a few questions and get a recommendation for your next road trip destination.</p>
+        </div>
+    
+        <!-- AI Assistant Form -->
+        <div class="content">
+            <div class="assistant">
+                <form id="aiAssistantForm">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="10" required>
+    
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+    
+                    <label for="season">Preferred season:</label>
+                    <select id="season" name="season">
+                        <option value="summer">Summer</option>
+                        <option value="monsoon">Monsoon</option>
+                        <option value="winter">Winter</option>
+                    </select>
+    
+                    <label for="destination">Destination type:</label>
+                    <select id="destination" name="destination">
+                        <option value="mountains">Mountains</option>
+                        <option value="beach">Beach</option>
+                        <option value="desert">Desert</option>
+                        <option value="spiritual">Spiritual</option>
+                        <option value="wildlife">Wildlife</option>
+                    </select>
+    
+                    <button type="submit">Get Recommendation</button>
+                </form>
+                <div id="result"></div>
+            </div>
+        </div>
+    
+        <!-- About Us Section -->
+        <div class="about" id="about">
+            <h2>About Us</h2>
+            <p>JustFuel Up is dedicated to helping you plan the perfect road trip across the diverse and beautiful landscapes of India. Whether you are looking for adventure, relaxation, or spiritual enlightenment, we have got you covered.</p>
+        </div>
+    
+        <!-- Footer -->
+        <div class="footer">
+            <p>Credits: Priyansh Pratap Singh</p>
+        </div>
+    
+        <script>
+            document.getElementById('aiAssistantForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+    
+                var age = document.getElementById('age').value;
+                var gender = document.getElementById('gender').value;
+                var season = document.getElementById('season').value;
+                var destination = document.getElementById('destination').value;
+    
+                var result = getRecommendation(age, gender, season, destination);
+    
+                document.getElementById('result').innerHTML = 'Recommended Location: ' + result;
+            });
+    
+            function getRecommendation(age, gender, season, destination) {
+                // Sample recommendation logic (replace with your actual recommendation logic)
+                var locations = {
+                    mountains: ['Manali', 'Leh', 'Spiti Valley', 'Shimla', 'Nainital'],
+                    beach: ['Goa', 'Kerala', 'Andaman', 'Pondicherry', 'Gokarna'],
+                    desert: ['Jaisalmer', 'Bikaner', 'Rann of Kutch', 'Pushkar', 'Jodhpur'],
+                    spiritual: ['Rishikesh', 'Haridwar', 'Varanasi', 'Amritsar', 'Bodh Gaya'],
+                    wildlife: ['Jim Corbett', 'Ranthambore', 'Kaziranga', 'Sundarbans', 'Gir Forest']
+                };
+    
+                var recommendedLocation = locations[destination][Math.floor(Math.random() * locations[destination].length)];
+                return recommendedLocation;
+            }
+        </script>
+    </body>
+    </html>

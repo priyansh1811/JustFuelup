@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife - JustFuel Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('/wildlife/wildlifebg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        .overlay {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #ff0000;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .dropdown-content a:hover {
+            background-color: #e4d7d7;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            color: #ff0000;
+        }
+        .header {
+            text-align: center;
+            padding: 150px 20px 50px;
+        }
+        .header h1 {
+            margin: 0;
+            color: red;
+        }
+        .header p {
+            margin: 10px 0 0;
+            font-weight: bolder;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h2 {
+            font-size: 28px;
+            margin: 20px 0;
+        }
+        .content p {
+            font-size: 18px;
+            margin: 10px 0;
+            font-weight: bolder;
+        }
+        .location {
+            margin: 20px 0;
+        }
+        .location img {
+            width: 30%;
+            height: 270px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            margin-left: 70px;
+
+        }
+        .about {
+            text-align: center;
+            padding: 50px 20px;
+            background: #f0f0f091;
+            color: black;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #e0e0e0;
+            color: black;
+        }
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="#locations" class="dropbtn">Location</a>
+            <div class="dropdown-content">
+                <a href="mountain.html">Mountains</a>
+                <a href="beach.html">Beach</a>
+                <a href="desert.html">Desert</a>
+                <a href="spiritual.html">Spiritual</a>
+                <a href="wildlife.html">Wildlife</a>
+            </div>
+        </div>
+        <a href="#about">About</a>
+        <a href="budget_calculator.html">Budget Calculator</a>
+        <a href="ai.html">AI Assistant</a>
+    </div>
+
+    <!-- Website Name and Description -->
+    <div class="header">
+        <h1>JustFuel Up</h1>
+        <p>Your personalized road trip planner for exploring the wonders of India.</p>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h2>Explore the Wilderness</h2>
+        <p>India is home to a rich diversity of wildlife. From the dense forests of the Western Ghats to the arid deserts of Rajasthan, India offers a plethora of wildlife destinations for nature enthusiasts and adventure seekers.</p>
+
+        <h2>Top Wildlife Destinations in India</h2>
+        <p>India's wildlife sanctuaries and national parks are renowned for their unique ecosystems and diverse species. Explore the top wildlife destinations in India and immerse yourself in nature's beauty.</p>
+
+        <!-- Indian Wildlife Destinations -->
+        <div class="location">
+            <h3>1. Jim Corbett National Park</h3>
+            <img src="/wildlife/corbett1.jpg" alt="Jim Corbett National Park">
+            <img src="/wildlife/corbett2.jpg" alt="Jim Corbett National Park">
+            <p>Jim Corbett National Park, located in Uttarakhand, is the oldest national park in India. It is known for its Bengal tigers and diverse wildlife.</p>
+            <p><strong>Activities:</strong> Wildlife safaris, bird watching, trekking, and exploring the scenic landscapes.</p>
+            <p>Jim Corbett offers an unparalleled experience for wildlife enthusiasts. The park's rich biodiversity and stunning landscapes make it a must-visit destination.</p>
+        </div>
+
+        <div class="location">
+            <h3>2. Ranthambore National Park</h3>
+            <img src="/wildlife/ranthambore1.jpg" alt="Ranthambore National Park">
+            <img src="/wildlife/ranthambore2.jpg" alt="Ranthambore National Park">
+            <p>Ranthambore National Park, located in Rajasthan, is famous for its royal Bengal tigers and ancient ruins. It is one of the best places to spot tigers in their natural habitat.</p>
+            <p><strong>Activities:</strong> Tiger safaris, exploring Ranthambore Fort, bird watching, and nature walks.</p>
+            <p>Ranthambore's unique blend of wildlife and history provides a fascinating experience for visitors. The park's rugged terrain and diverse fauna make it a prime destination for wildlife enthusiasts.</p>
+        </div>
+
+        <div class="location">
+            <h3>3. Kaziranga National Park</h3>
+            <img src="/wildlife/kaziranga1.jpg" alt="Kaziranga National Park">
+            <img src="/wildlife/kaziranga2.jpg" alt="Kaziranga National Park">
+            <p>Kaziranga National Park, located in Assam, is a UNESCO World Heritage Site. It is known for its large population of Indian one-horned rhinoceroses.</p>
+            <p><strong>Activities:</strong> Elephant safaris, jeep safaris, bird watching, and exploring the park's wetlands.</p>
+            <p>Kaziranga offers a unique opportunity to observe the majestic rhinoceroses in their natural habitat. The park's rich flora and fauna make it a significant conservation area.</p>
+        </div>
+
+        <div class="location">
+            <h3>4. Sundarbans National Park</h3>
+            <img src="/wildlife/sundarbans1.jpg" alt="Sundarbans National Park">
+            <img src="/wildlife/sundarbans2.jpg" alt="Sundarbans National Park">
+            <p>Sundarbans National Park, located in West Bengal, is a UNESCO World Heritage Site and the largest mangrove forest in the world. It is known for its Royal Bengal tigers and unique ecosystem.</p>
+            <p><strong>Activities:</strong> Boat safaris, bird watching, exploring mangrove forests, and visiting local villages.</p>
+            <p>The Sundarbans' unique ecosystem and rich biodiversity make it a fascinating destination for wildlife enthusiasts. The park's scenic beauty and elusive tigers add to its allure.</p>
+        </div>
+
+        <div class="location">
+            <h3>5. Bandhavgarh National Park</h3>
+            <img src="/wildlife/bandhavgarh1.webp" alt="Bandhavgarh National Park">
+            <img src="/wildlife/bandhavgarh2.jpg" alt="Bandhavgarh National Park">
+            <p>Bandhavgarh National Park, located in Madhya Pradesh, is known for its high density of Bengal tigers. The park's diverse wildlife and scenic landscapes make it a popular destination for wildlife lovers.</p>
+            <p><strong>Activities:</strong> Tiger safaris, bird watching, exploring ancient caves, and nature walks.</p>
+            <p>Bandhavgarh offers a thrilling experience for wildlife enthusiasts. The park's rich history, diverse fauna, and breathtaking landscapes make it a must-visit destination.</p>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="about" class="about">
+        <h2>About Us</h2>
+        <p>JustFuel Up is dedicated to making your road trips in India an unforgettable experience. We provide personalized recommendations based on your travel style, ensuring you have a memorable experience.</p>
+        <p>We also provide tools to manage your budget, plan your stops, and discover activities along the way.</p>
+        <p>Our platform combines the beauty of India's diverse landscapes with the convenience of modern technology, helping you explore the country with ease and comfort.</p>
+        <p>Our team is passionate about travel and is committed to helping you create lasting memories on your journey through India.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Credits: Priyansh Pratap Singh</p>
+    </div>
+
+</body>
+</html>

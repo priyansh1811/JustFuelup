@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustFuel Up</title>
+    <style>
+        /* Import New Amsterdam Font */
+        @font-face {
+            font-family: 'New Amsterdam';
+            src: url('path_to_your_font_directory/NewAmsterdam-Regular.woff2') format('woff2'),
+                 url('path_to_your_font_directory/NewAmsterdam-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('/home page/home.jpg'); /* Full-page background image */
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgba(18, 18, 18, 0.615);
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s;
+            font-family: "New Amsterdam", sans-serif; /* Apply New Amsterdam font */
+        }
+        
+        .navbar a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px 15px;
+            transition: color 0.3s;
+            font-size: 17px;
+            font-weight: bold; /* Makes the text bolder */
+        }
+        .navbar a:hover {
+            color: #b33636;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropbtn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #1a3cac86;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown:hover .dropbtn {
+            color: #a83131;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 150px 20px 50px;
+            background: rgba(16, 9, 9, 0);
+        }
+        
+        .header h1 {
+            color: rgb(145, 88, 220);
+            margin: 0;
+            font-size: 48px; /* Adjust the size as needed */
+        }
+        
+        .header h2 {
+            color: rgb(235, 235, 235);
+            margin: 0;
+            font-size: 30px
+        }
+        .header h3 {
+            color: rgb(235, 235, 235);
+            
+
+            margin: 0;
+        }
+        .header h4 {
+            color: rgb(235, 235, 235);
+            margin: 0;
+            font-size: 20px
+        }
+
+        .header p {
+            margin: 10px 0 0;
+            color: azure;
+        }
+        
+        .locations {
+            padding: 50px 20px;
+        }
+        
+        .locations-heading {
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .location-box {
+            background: #010101;
+            border: 1px solid #060505;
+            border-radius: 20px;
+            padding: 20px;
+            width: 97%;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s, height 0.3s;
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+        }
+        
+        .location-box h3 {
+            margin-top: 0;
+            color: #000000;
+            font-size: 30px
+            
+        }
+        
+        .location-box p {
+            margin: 10px 0;
+            color: #faf6f7;
+            font-weight: bold;
+            font-size: 26px;
+            text-shadow: 
+                -1px -1px 0 #000,  
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000; /* Creates a border-like shadow effect around the text */
+        }
+        
+        
+        .location-box button {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        
+        .location-box button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+        
+        .location-box:hover {
+            transform: scale(1.02); /* Slightly reduced scale on hover for full-width */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .about {
+            text-align: center;
+            padding: 50px 20px;
+            background: #ffffffae; /* Background color for About Us */
+            color: black; /* Text color */
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #272727; /* Background color for Credits */
+            color: rgb(255, 255, 255); /* Text color */
+        }
+        
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="#locations" class="dropbtn">Location</a>
+            <div class="dropdown-content">
+                <a href="mountain.html">Mountains</a>
+                <a href="beach.html">Beach</a>
+                <a href="desert.html">Desert</a>
+                <a href="spiritual.html">Spiritual</a>
+                <a href="wildlife.html">Wildlife</a>
+            </div>
+        </div>
+        <a href="#about">About</a>
+        <a href="budget_calculator.html">Budget Calculator</a>
+        <a href="ai.html">AI Assistant</a>
+    </div>
+
+    <!-- Website Name and Description -->
+    <div class="header">
+        <h1>JustFuelUp</h1><br>
+        <h4>
+        <p><b>Your personalized road trip planner for exploring the wonders of India.</p>
+        <p>Plan your perfect journey with tailored recommendations based on your preferences and needs.</p>
+        <p>Discover new places, manage your budget, and enjoy your trip with ease.</p><br></h4>
+        <p><b><h2>“From mountain vistas to coastal drives, your road trip starts here.”</b></p>
+    </div>
+
+    <!-- Location Type Heading and Boxes -->
+    <div id="locations" class="locations">
+        <div class="locations-heading" style="color: white; font-size: 28px;">
+            <h3>Choose Your Destination</h3>
+        </div>
+        <div class="location-box" style="background-image: url('home page/mountain.jpg');">
+            <h3>Mountain</h3>
+            <p>Experience the serene beauty of India's majestic mountains.</p>
+            <button onclick="location.href='mountain.html'">Explore</button>
+        </div>
+        <div class="location-box" style="background-image: url('home page/beach.jpg');">
+            <h3>Beach</h3>
+            <p>Relax on the sun-kissed beaches along the Indian coastline.</p>
+            <button onclick="location.href='beach.html'">Explore</button>
+        </div>
+        <div class="location-box" style="background-image: url('home page/desert.jpg');">
+            <h3>Desert</h3>
+            <p>Discover the vast and mystical deserts of India.</p>
+            <button onclick="location.href='desert.html'">Explore</button>
+        </div>
+        <div class="location-box" style="background-image: url('home page/spiritual.jpg');">
+            <h3>Spiritual</h3>
+            <p>Embark on a journey to India's most sacred spiritual sites.</p>
+            <button onclick="location.href='spiritual.html'">Explore</button>
+        </div>
+        <div class="location-box" style="background-image: url('home page/wildlife.jpg');">
+            <h3>Wildlife</h3>
+            <p>Explore the diverse and vibrant wildlife parks of India.</p>
+            <button onclick="location.href='wildlife.html'">Explore</button>
+        </div>
+    </div>
+    
+
+    <!-- About Section -->
+    <div id="about" class="about">
+        <h2>About Us</h2>
+        <p><b>JustFuel Up is dedicated to helping you plan the perfect road trip across India, tailored to your preferences and needs.</p>
+        <p>Whether you're looking for adventure, relaxation, or spiritual enlightenment, we've got you covered.</p>
+        <p>Our platform offers personalized recommendations based on your travel style, ensuring you have a memorable experience.</p>
+        <p>We also provide tools to manage your budget, plan your stops, and discover activities along the way.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Credits: Priyansh Pratap Singh </p>
+    </div>
+
+</body>
+</html>

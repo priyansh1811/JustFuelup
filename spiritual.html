@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual - JustFuel Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('/spiritual/spiritual2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: rgb(233, 233, 233);
+            
+        }
+        .overlay {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #ff0000;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            color: #ff1e00;
+        }
+        .header {
+            text-align: center;
+            padding: 150px 20px 50px;
+        }
+        .header h1 {
+            margin: 0;
+            color: red;
+        }
+        .header p {
+            margin: 10px 0 0;
+            font-weight: bolder;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h2 {
+            font-size: 28px;
+            margin: 20px 0;
+        }
+        .content p {
+            font-size: 18px;
+            margin: 10px 0;
+            font-weight: bolder;
+        }
+        .location {
+            margin: 20px 0;
+        }
+        .location img {
+            width: 30%;
+            height: 270px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            margin-left: 70px;
+
+        }
+        .about {
+            text-align: center;
+            padding: 50px 20px;
+            background: #f0f0f083;
+            color: black;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #e0e0e0;
+            color: black;
+        }
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="#locations" class="dropbtn">Location</a>
+            <div class="dropdown-content">
+                <a href="mountain.html">Mountains</a>
+                <a href="beach.html">Beach</a>
+                <a href="desert.html">Desert</a>
+                <a href="spiritual.html">Spiritual</a>
+                <a href="wildlife.html">Wildlife</a>
+            </div>
+        </div>
+        <a href="#about">About</a>
+        <a href="budget_calculator.html">Budget Calculator</a>
+        <a href="ai.html">AI Assistant</a>
+    </div>
+
+    <!-- Website Name and Description -->
+    <div class="header">
+        <h1>JustFuel Up</h1>
+        <p>Your personalized road trip planner for exploring the wonders of India.</p>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h2>Embrace the Spiritual Essence</h2>
+        <p>India is a land of spirituality and ancient wisdom. From the tranquil banks of the Ganges to the serene temples of the south, India offers a plethora of spiritual destinations that provide peace and enlightenment.</p>
+
+        <h2>Spiritual Destinations in India</h2>
+        <p>India's spiritual destinations are revered for their sanctity and historical significance. Explore the top spiritual sites in India and immerse yourself in their divine atmosphere.</p>
+
+        <!-- Indian Spiritual Destinations -->
+        <div class="location">
+            <h3>1. Varanasi</h3>
+            <img src="/spiritual/varanasi1.jpg" alt="Varanasi">
+            <img src="/spiritual/varanasi2.jpg" alt="Varanasi">
+            <p>Varanasi, one of the oldest cities in the world, is a sacred city on the banks of the Ganges. It is a major center for Hindu pilgrimage and spiritual learning.</p>
+            <p><strong>Activities:</strong> Boat ride on the Ganges, witnessing the Ganga Aarti, exploring ancient temples, and participating in spiritual rituals.</p>
+            <p>Varanasi is known for its vibrant ghats, narrow winding streets, and spiritual ambiance. It is a place where life and death coexist harmoniously, offering a profound experience to its visitors.</p>
+        </div>
+
+        <div class="location">
+            <h3>2. Rishikesh</h3>
+            <img src="/spiritual/rishikesh1.jpg" alt="Rishikesh">
+            <img src="/spiritual/rishikesh2.jpg" alt="Rishikesh">
+            <p>Rishikesh, located in the foothills of the Himalayas, is known as the Yoga Capital of the World. It is a hub for spiritual seekers and adventure enthusiasts alike.</p>
+            <p><strong>Activities:</strong> Yoga and meditation retreats, rafting in the Ganges, exploring ashrams, and participating in the evening Ganga Aarti.</p>
+            <p>Rishikesh offers a perfect blend of spirituality and adventure. It is a serene town where you can find inner peace and connect with nature while engaging in thrilling activities.</p>
+        </div>
+
+        <div class="location">
+            <h3>3. Amritsar</h3>
+            <img src="/spiritual/amritsar1.jpg" alt="Amritsar">
+            <img src="/spiritual/amritsar2.jpg" alt="Amritsar">
+            <p>Amritsar, home to the Golden Temple, is a major pilgrimage site for Sikhs. The city is known for its rich history, cultural heritage, and spiritual significance.</p>
+            <p><strong>Activities:</strong> Visiting the Golden Temple, participating in the Langar (community kitchen), exploring Jallianwala Bagh, and witnessing the Wagah Border ceremony.</p>
+            <p>Amritsar is a city of spiritual devotion and communal harmony. The Golden Temple, with its stunning architecture and serene ambiance, offers a divine experience to all who visit.</p>
+        </div>
+
+        <div class="location">
+            <h3>4. Bodh Gaya</h3>
+            <img src="/spiritual/bodhgaya1.jpg" alt="Bodh Gaya">
+            <img src="/spiritual/bodhgaya2.jpg" alt="Bodh Gaya">
+            <p>Bodh Gaya, the place where Lord Buddha attained enlightenment, is a significant pilgrimage site for Buddhists. It is home to the Mahabodhi Temple, a UNESCO World Heritage Site.</p>
+            <p><strong>Activities:</strong> Meditating under the Bodhi Tree, exploring Mahabodhi Temple, visiting monasteries, and attending spiritual teachings.</p>
+            <p>Bodh Gaya offers a tranquil and spiritual environment, attracting pilgrims and visitors from around the world. It is a place of profound peace and spiritual awakening.</p>
+        </div>
+
+        <div class="location">
+            <h3>5. Tirupati</h3>
+            <img src="/spiritual/tirupati1.jpeg" alt="Tirupati">
+            <img src="/spiritual/tirupati2.jpg" alt="Tirupati">
+            <p>Tirupati, located in the state of Andhra Pradesh, is one of the most visited pilgrimage sites in India. It is known for the Sri Venkateswara Temple, situated on the Tirumala hills.</p>
+            <p><strong>Activities:</strong> Visiting the Sri Venkateswara Temple, participating in the daily rituals, exploring the hill temple complex, and experiencing the serene ambiance.</p>
+            <p>Tirupati is a place of immense spiritual significance, attracting millions of devotees annually. The temple's architecture, rituals, and divine atmosphere make it a unique spiritual destination.</p>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="about" class="about">
+        <h2>About Us</h2>
+        <p>JustFuel Up is dedicated to making your road trips in India an unforgettable experience. We provide personalized recommendations based on your travel style, ensuring you have a memorable experience.</p>
+        <p>We also provide tools to manage your budget, plan your stops, and discover activities along the way.</p>
+        <p>Our platform combines the beauty of India's diverse landscapes with the convenience of modern technology, helping you explore the country with ease and comfort.</p>
+        <p>Our team is passionate about travel and is committed to helping you create lasting memories on your journey through India.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Credits:  Priyansh Pratap Singh</p>
+    </div>
+
+</body>
+</html>

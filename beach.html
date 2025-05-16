@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beach - JustFuel Up</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('/beach/beachbg.webp') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+        .overlay {
+            background: rgba(145, 88, 220, 0.8);
+            padding: 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            width: 60%;
+            border-radius: 20px;
+            margin: 20px auto;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+        .navbar a:hover {
+            color: #ffce00;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+            padding: 10px 15px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+            font-size: 0.9rem;
+        }
+        .dropdown-content a:hover {
+            background-color: #f3f7f8;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            color: #ffce00;
+        }
+        .header {
+            text-align: center;
+            padding: 150px 20px 50px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 3rem;
+            color: rgb(0, 120, 129);
+        }
+        .header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: rgb(255, 255, 255);
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h2 {
+            font-size: 2.5rem;
+            margin: 20px 0;
+            color: rgb(58, 132, 211);
+        }
+        .content p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: rgb(0, 0, 0);
+            font-weight: 500;
+        }
+        .location {
+            margin: 20px 0;
+        }
+        .location h3 {
+            font-size: 2rem;
+            color: white;
+        }
+        .location img {
+            width: 30%;
+            height: 270px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            margin-left: 70px;
+            transition: transform 0.3s;
+        }
+        .location img:hover {
+            transform: scale(1.05);
+        }
+        .about {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .about p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+        .footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Location</button>
+            <div class="dropdown-content">
+                <a href="mountain.html">Mountains</a>
+                <a href="beach.html">Beach</a>
+                <a href="desert.html">Desert</a>
+                <a href="spiritual.html">Spiritual</a>
+                <a href="wildlife.html">Wildlife</a>
+            </div>
+        </div>
+        <a href="#about">About</a>
+        <a href="budget_calculator.html">Budget Calculator</a>
+        <a href="ai.html">AI Assistant</a>
+    </div>
+
+    <!-- Website Name and Description -->
+    <div class="header">
+        <h1>JustFuel Up</h1>
+        <p>Your personalized road trip planner for exploring the wonders of India.</p>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h2>Explore the Serene Beaches</h2>
+        <p>Beaches offer a perfect escape to unwind, soak up the sun, and enjoy the tranquil sound of the waves. Whether you're looking for adventure or relaxation, the beaches have something for everyone.</p>
+
+        <h2>Indian Beaches</h2>
+        <p>India is blessed with some of the most beautiful and diverse beaches, from the golden sands of Goa to the serene shores of Kerala. There's a beach destination for every type of traveler.</p>
+
+        <!-- Indian Beach Destinations -->
+        <div class="location">
+            <h3>1. Goa</h3>
+            <img src="/beach/goa1.jpg" alt="Goa">
+            <img src="/beach/goa2.jpg" alt="Goa">
+            <p>Goa, located on the western coast, is famous for its vibrant nightlife, beautiful beaches, and rich cultural heritage.</p>
+            <p><strong>Activities:</strong> Water sports, beach parties, exploring historical sites, and enjoying Goan cuisine.</p>
+            <p>Goa is also known for its beach shacks, flea markets, and the annual Goa Carnival. It's a perfect destination for beach lovers and party enthusiasts.</p>
+        </div>
+
+        <div class="location">
+            <h3>2. Kovalam</h3>
+            <img src="/beach/kovalam1.jpg" alt="Kovalam">
+            <img src="/beach/kovalam2.webp" alt="Kovalam">
+            <p>Kovalam, in Kerala, offers serene beaches with crescent-shaped shores and a relaxed atmosphere.</p>
+            <p><strong>Activities:</strong> Surfing, sunbathing, Ayurvedic treatments, and exploring nearby backwaters.</p>
+            <p>Kovalam is known for its lighthouse beach, calm waters, and traditional Kerala cuisine. It's a great place to relax and rejuvenate.</p>
+        </div>
+
+        <div class="location">
+            <h3>3. Andaman and Nicobar Islands</h3>
+            <img src="/beach/andaman1.jpg" alt="Andaman and Nicobar Islands">
+            <img src="/beach/andaman2.jpg" alt="Andaman and Nicobar Islands">
+            <p>The Andaman and Nicobar Islands offer pristine beaches, crystal clear waters, and a variety of marine life.</p>
+            <p><strong>Activities:</strong> Scuba diving, snorkeling, visiting historical sites, and island hopping.</p>
+            <p>These islands are also known for their rich biodiversity, coral reefs, and the famous Radhanagar Beach. It's a paradise for water sports enthusiasts and nature lovers.</p>
+        </div>
+
+        <div class="location">
+            <h3>4. Varkala</h3>
+            <img src="/beach/varkala1.jpg" alt="Varkala">
+            <img src="/beach/varkala2.jpg" alt="Varkala">
+            <p>Varkala, in Kerala, is known for its stunning cliffs, serene beaches, and sacred temples.</p>
+            <p><strong>Activities:</strong> Swimming, sunbathing, yoga retreats, and exploring local markets.</p>
+            <p>Varkala is also famous for its natural springs, Ayurvedic spas, and the beautiful Papanasam Beach. It's a perfect destination for a peaceful and spiritual getaway.</p>
+        </div>
+
+        <div class="location">
+            <h3>5. Pondicherry</h3>
+            <img src="/beach/pondicherry1.avif" alt="Pondicherry">
+            <img src="/beach/pondicherry2.jpg" alt="Pondicherry">
+            <p>Pondicherry, on the eastern coast, offers a unique blend of French colonial architecture, beautiful beaches, and vibrant culture.</p>
+            <p><strong>Activities:</strong> Beach walks, exploring French quarters, water sports, and enjoying local cuisine.</p>
+            <p>Pondicherry is also known for its ashrams, heritage buildings, and the tranquil Auroville. It's a great destination for cultural enthusiasts and beach lovers.</p>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="about" class="about">
+        <h2>About Us</h2>
+        <p>JustFuel Up is dedicated to helping you plan the perfect road trip across India, tailored to your preferences and needs.</p>
+        <p>Whether you're looking for adventure, relaxation, or spiritual enlightenment, we've got you covered.</p>
+        <p>Our platform offers personalized recommendations based on your travel style, ensuring you have a memorable experience.</p>
+        <p>We also provide tools to manage your budget, plan your stops, and discover activities along the way.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Credits: Kunal Sharma, Priyansh Pratap Singh, Ansh Gupta</p>
+    </div>
+
+</body>
+</html>

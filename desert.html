@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desert - JustFuel Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('/desert/desertbg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            
+        }
+        .overlay {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            position: fixed;
+            width: 60%;
+            top: 0;
+            left: 20%;
+            border-radius: 25px;
+            z-index: 1000;
+            transition: background 0.3s;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 10px 15px;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #ff1e00;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #e90e0e;
+            font-size: 14px;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            font-size: 14px;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .dropdown-content a:hover {
+            background-color: #ff1e00;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            color: #ff1100;
+        }
+        .header {
+            text-align: center;
+            padding: 120px 20px 50px;
+        }
+        .header h1 {
+            margin: 0;
+            color: rgb(145, 88, 220);
+            font-size: 48px;
+        }
+        .header p {
+            margin: 20px 0 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .content h2 {
+            font-size: 36px;
+            margin: 20px 0;
+            color: #000000;
+        }
+        .content p {
+            font-size: 16px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .location {
+            margin: 20px 0;
+            color: white;
+        }
+        .location h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+        .location img {
+            width: 30%;
+            height: 270px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+        .location img:hover {
+            transform: scale(1.1);
+        }
+        .about {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="#locations" class="dropbtn">Location</a>
+            <div class="dropdown-content">
+                <a href="mountain.html">Mountains</a>
+                <a href="beach.html">Beach</a>
+                <a href="desert.html">Desert</a>
+                <a href="spiritual.html">Spiritual</a>
+                <a href="wildlife.html">Wildlife</a>
+            </div>
+        </div>
+        <a href="#about">About</a>
+        <a href="budget_calculator.html">Budget Calculator</a>
+        <a href="ai.html">AI Assistant</a>
+    </div>
+
+    <!-- Website Name and Description -->
+    <div class="header">
+        <h1>JustFuel Up</h1>
+        <p>Your personalized road trip planner for exploring the wonders of India.</p>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h2>Discover the Majestic Deserts</h2>
+        <p>Deserts offer a unique and enchanting landscape with vast stretches of sand, stunning sunsets, and a rich cultural heritage. Experience the tranquility and beauty of India's deserts.</p>
+
+        <h2>Indian Desert Destinations</h2>
+        <p>India's deserts are renowned for their captivating beauty, vibrant culture, and adventurous activities. Explore the top desert destinations in India.</p>
+
+        <!-- Indian Desert Destinations -->
+        <div class="location">
+            <h3>1. Jaisalmer</h3>
+            <img src="/desert/jaisalmer1.jpg" alt="Jaisalmer">
+            <img src="/desert/jaisalmer2.jpg" alt="Jaisalmer">
+            <p>Jaisalmer, known as the Golden City, is famous for its yellow sandstone architecture, grand forts, and camel safaris.</p>
+            <p><strong>Activities:</strong> Camel rides, exploring Jaisalmer Fort, visiting sand dunes, and experiencing local culture.</p>
+            <p>Jaisalmer also offers vibrant markets, traditional Rajasthani cuisine, and stunning desert landscapes. It's a perfect destination for a cultural and adventurous experience.</p>
+        </div>
+
+        <div class="location">
+            <h3>2. Thar Desert</h3>
+            <img src="/desert/thar1.jpg" alt="Thar Desert">
+            <img src="/desert/thar2.jpg" alt="Thar Desert">
+            <p>The Thar Desert, also known as the Great Indian Desert, spans across Rajasthan and offers a blend of natural beauty and cultural experiences.</p>
+            <p><strong>Activities:</strong> Desert safaris, dune bashing, camping, and exploring desert villages.</p>
+            <p>The Thar Desert is known for its rolling sand dunes, traditional music and dance performances, and the annual Desert Festival. It's a great place for adventure and cultural immersion.</p>
+        </div>
+
+        <div class="location">
+            <h3>3. Bikaner</h3>
+            <img src="/desert/bikaner1.jpg" alt="Bikaner">
+            <img src="/desert/bikaner2.jpg" alt="Bikaner">
+            <p>Bikaner, located in the Thar Desert, is known for its magnificent forts, temples, and camel safaris.</p>
+            <p><strong>Activities:</strong> Exploring Junagarh Fort, camel rides, visiting Karni Mata Temple, and enjoying local delicacies.</p>
+            <p>Bikaner is also famous for its vibrant markets, traditional Rajasthani sweets, and the annual Camel Festival. It's a perfect destination for a blend of history and adventure.</p>
+        </div>
+
+        <div class="location">
+            <h3>4. Jodhpur</h3>
+            <img src="/desert/jodhpur1.jpg" alt="Jodhpur">
+            <img src="/desert/jodhpur2.jpg" alt="Jodhpur">
+            <p>Jodhpur, also known as the Blue City, offers stunning blue-painted houses, majestic forts, and a rich cultural heritage.</p>
+            <p><strong>Activities:</strong> Exploring Mehrangarh Fort, visiting Umaid Bhawan Palace, and enjoying local cuisine.</p>
+            <p>Jodhpur is known for its beautiful architecture, bustling markets, and traditional music and dance performances. It's a great place for history enthusiasts and culture lovers.</p>
+        </div>
+
+        <div class="location">
+            <h3>5. Pushkar</h3>
+            <img src="/desert/pushkar1.webp" alt="Pushkar">
+            <img src="/desert/pushkar2.jpg" alt="Pushkar">
+            <p>Pushkar, a sacred town in Rajasthan, is famous for its holy lake, temples, and the annual Pushkar Camel Fair.</p>
+            <p><strong>Activities:</strong> Visiting Pushkar Lake, exploring Brahma Temple, and participating in the Camel Fair.</p>
+            <p>Pushkar offers a unique blend of spirituality, culture, and adventure. It's a must-visit destination for those looking for a spiritual and cultural experience.</p>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="about" class="about">
+        <h2>About Us</h2>
+        <p>JustFuel Up is dedicated to helping you plan the perfect road trip across India, tailored to your preferences and needs.</p>
+        <p>Whether you're looking for adventure, relaxation, or spiritual enlightenment, we've got you covered.</p>
+        <p>Our platform offers personalized recommendations based on your travel style, ensuring you have a memorable experience.</p>
+        <p>We also provide tools to manage your budget, plan your stops, and discover activities along the way.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Credits: Priyansh Pratap Singh</p>
+    </div>
+
+</body>
+</html>

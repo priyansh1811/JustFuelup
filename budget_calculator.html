@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Trip Budget Calculator</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('/backgroundcal.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+        .overlay {
+            background: rgba(145, 88, 220, 0.8);
+            padding: 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            color: #ffce00;
+        }
+        .header {
+            text-align: center;
+            padding: 150px 20px 50px;
+            color: white;
+        }
+        .header h1 {
+            font-size: 3rem;
+            color: #ffce00;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .calculator {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+        }
+        .calculator label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+        .calculator select, .calculator input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .calculator button {
+            padding: 10px 20px;
+            background: #145088;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .calculator button:hover {
+            background: #003d6b;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(60, 40, 85, 0.8);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="budget_calculator.html">Budget Calculator</a>
+        <a href="ai.html">AI Assistant</a>
+    </div>
+
+    <div class="header">
+        <h1>AI-Powered Trip Budget Calculator</h1>
+        <p>Plan your road trip efficiently with estimated cost predictions.</p>
+    </div>
+
+    <div class="content">
+        <div class="calculator">
+            <form id="budgetCalculatorForm">
+                <label for="startLocation">Start Location:</label>
+                <input type="text" id="startLocation" name="startLocation" required>
+
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+
+                <label for="tripDuration">Trip Duration:</label>
+                <select id="tripDuration" name="tripDuration">
+                    <option value="Weekend">Weekend</option>
+                    <option value="1 Week">1 Week</option>
+                    <option value="2 Weeks">2 Weeks</option>
+                    <option value="1+ Month">1+ Month</option>
+                </select>
+
+                <label for="numPeople">Number of Travelers:</label>
+                <input type="number" id="numPeople" name="numPeople" min="1" required>
+
+                <label for="vehicleType">Vehicle Type:</label>
+                <select id="vehicleType" name="vehicleType">
+                    <option value="Sedan">Sedan</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Hatchback">Hatchback</option>
+                    <option value="Motorcycle">Motorcycle</option>
+                    <option value="Electric Car">Electric Car</option>
+                </select>
+
+                <label for="accommodationType">Accommodation Type:</label>
+                <select id="accommodationType" name="accommodationType">
+                    <option value="Budget">Budget</option>
+                    <option value="Mid-range">Mid-range</option>
+                    <option value="Luxury">Luxury</option>
+                </select>
+
+                <label for="diningPreference">Dining Preference:</label>
+                <select id="diningPreference" name="diningPreference">
+                    <option value="Street Food">Street Food</option>
+                    <option value="Casual Dining">Casual Dining</option>
+                    <option value="Fine Dining">Fine Dining</option>
+                </select>
+
+                <button type="submit">Calculate Budget</button>
+            </form>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Created by Your Team</p>
+    </div>
+</body>
+</html>
